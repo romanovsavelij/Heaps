@@ -56,6 +56,40 @@ CMAKE_BINARY_DIR = /Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +111,18 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -123,6 +169,71 @@ Heaps/fast:
 	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/build
 .PHONY : Heaps/fast
 
+#=============================================================================
+# Target rules for targets named Google_Tests_run
+
+# Build rule for target.
+Google_Tests_run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Google_Tests_run
+.PHONY : Google_Tests_run
+
+# fast build rule for target.
+Google_Tests_run/fast:
+	$(MAKE) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/build
+.PHONY : Google_Tests_run/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f Test/googletest/googlemock/CMakeFiles/gmock.dir/build.make Test/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f Test/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make Test/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f Test/googletest/googletest/CMakeFiles/gtest_main.dir/build.make Test/googletest/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f Test/googletest/googletest/CMakeFiles/gtest.dir/build.make Test/googletest/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
 BinomialHeap.o: BinomialHeap.cpp.o
 
 .PHONY : BinomialHeap.o
@@ -150,32 +261,221 @@ BinomialHeap.cpp.s:
 	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinomialHeap.cpp.s
 .PHONY : BinomialHeap.cpp.s
 
-main.o: main.cpp.o
+BinomialHeapNode.o: BinomialHeapNode.cpp.o
 
-.PHONY : main.o
+.PHONY : BinomialHeapNode.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/main.cpp.o
-.PHONY : main.cpp.o
+BinomialHeapNode.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinomialHeapNode.cpp.o
+.PHONY : BinomialHeapNode.cpp.o
 
-main.i: main.cpp.i
+BinomialHeapNode.i: BinomialHeapNode.cpp.i
 
-.PHONY : main.i
+.PHONY : BinomialHeapNode.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/main.cpp.i
-.PHONY : main.cpp.i
+BinomialHeapNode.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinomialHeapNode.cpp.i
+.PHONY : BinomialHeapNode.cpp.i
 
-main.s: main.cpp.s
+BinomialHeapNode.s: BinomialHeapNode.cpp.s
 
-.PHONY : main.s
+.PHONY : BinomialHeapNode.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/main.cpp.s
-.PHONY : main.cpp.s
+BinomialHeapNode.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinomialHeapNode.cpp.s
+.PHONY : BinomialHeapNode.cpp.s
+
+LeftistHeap.o: LeftistHeap.cpp.o
+
+.PHONY : LeftistHeap.o
+
+# target to build an object file
+LeftistHeap.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeap.cpp.o
+.PHONY : LeftistHeap.cpp.o
+
+LeftistHeap.i: LeftistHeap.cpp.i
+
+.PHONY : LeftistHeap.i
+
+# target to preprocess a source file
+LeftistHeap.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeap.cpp.i
+.PHONY : LeftistHeap.cpp.i
+
+LeftistHeap.s: LeftistHeap.cpp.s
+
+.PHONY : LeftistHeap.s
+
+# target to generate assembly for a file
+LeftistHeap.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeap.cpp.s
+.PHONY : LeftistHeap.cpp.s
+
+LeftistHeapNode.o: LeftistHeapNode.cpp.o
+
+.PHONY : LeftistHeapNode.o
+
+# target to build an object file
+LeftistHeapNode.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o
+.PHONY : LeftistHeapNode.cpp.o
+
+LeftistHeapNode.i: LeftistHeapNode.cpp.i
+
+.PHONY : LeftistHeapNode.i
+
+# target to preprocess a source file
+LeftistHeapNode.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.i
+.PHONY : LeftistHeapNode.cpp.i
+
+LeftistHeapNode.s: LeftistHeapNode.cpp.s
+
+.PHONY : LeftistHeapNode.s
+
+# target to generate assembly for a file
+LeftistHeapNode.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.s
+.PHONY : LeftistHeapNode.cpp.s
+
+Operation.o: Operation.cpp.o
+
+.PHONY : Operation.o
+
+# target to build an object file
+Operation.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/Operation.cpp.o
+.PHONY : Operation.cpp.o
+
+Operation.i: Operation.cpp.i
+
+.PHONY : Operation.i
+
+# target to preprocess a source file
+Operation.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/Operation.cpp.i
+.PHONY : Operation.cpp.i
+
+Operation.s: Operation.cpp.s
+
+.PHONY : Operation.s
+
+# target to generate assembly for a file
+Operation.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/Operation.cpp.s
+.PHONY : Operation.cpp.s
+
+SkewHeap.o: SkewHeap.cpp.o
+
+.PHONY : SkewHeap.o
+
+# target to build an object file
+SkewHeap.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeap.cpp.o
+.PHONY : SkewHeap.cpp.o
+
+SkewHeap.i: SkewHeap.cpp.i
+
+.PHONY : SkewHeap.i
+
+# target to preprocess a source file
+SkewHeap.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeap.cpp.i
+.PHONY : SkewHeap.cpp.i
+
+SkewHeap.s: SkewHeap.cpp.s
+
+.PHONY : SkewHeap.s
+
+# target to generate assembly for a file
+SkewHeap.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeap.cpp.s
+.PHONY : SkewHeap.cpp.s
+
+SkewHeapNode.o: SkewHeapNode.cpp.o
+
+.PHONY : SkewHeapNode.o
+
+# target to build an object file
+SkewHeapNode.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o
+.PHONY : SkewHeapNode.cpp.o
+
+SkewHeapNode.i: SkewHeapNode.cpp.i
+
+.PHONY : SkewHeapNode.i
+
+# target to preprocess a source file
+SkewHeapNode.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeapNode.cpp.i
+.PHONY : SkewHeapNode.cpp.i
+
+SkewHeapNode.s: SkewHeapNode.cpp.s
+
+.PHONY : SkewHeapNode.s
+
+# target to generate assembly for a file
+SkewHeapNode.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeapNode.cpp.s
+.PHONY : SkewHeapNode.cpp.s
+
+StlHeap.o: StlHeap.cpp.o
+
+.PHONY : StlHeap.o
+
+# target to build an object file
+StlHeap.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/StlHeap.cpp.o
+.PHONY : StlHeap.cpp.o
+
+StlHeap.i: StlHeap.cpp.i
+
+.PHONY : StlHeap.i
+
+# target to preprocess a source file
+StlHeap.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/StlHeap.cpp.i
+.PHONY : StlHeap.cpp.i
+
+StlHeap.s: StlHeap.cpp.s
+
+.PHONY : StlHeap.s
+
+# target to generate assembly for a file
+StlHeap.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/StlHeap.cpp.s
+.PHONY : StlHeap.cpp.s
+
+Test/test.o: Test/test.cpp.o
+
+.PHONY : Test/test.o
+
+# target to build an object file
+Test/test.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/Test/test.cpp.o
+.PHONY : Test/test.cpp.o
+
+Test/test.i: Test/test.cpp.i
+
+.PHONY : Test/test.i
+
+# target to preprocess a source file
+Test/test.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/Test/test.cpp.i
+.PHONY : Test/test.cpp.i
+
+Test/test.s: Test/test.cpp.s
+
+.PHONY : Test/test.s
+
+# target to generate assembly for a file
+Test/test.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/Test/test.cpp.s
+.PHONY : Test/test.cpp.s
 
 # Help Target
 help:
@@ -183,15 +483,45 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... install/local"
 	@echo "... Heaps"
+	@echo "... Google_Tests_run"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... BinomialHeap.o"
 	@echo "... BinomialHeap.i"
 	@echo "... BinomialHeap.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... BinomialHeapNode.o"
+	@echo "... BinomialHeapNode.i"
+	@echo "... BinomialHeapNode.s"
+	@echo "... LeftistHeap.o"
+	@echo "... LeftistHeap.i"
+	@echo "... LeftistHeap.s"
+	@echo "... LeftistHeapNode.o"
+	@echo "... LeftistHeapNode.i"
+	@echo "... LeftistHeapNode.s"
+	@echo "... Operation.o"
+	@echo "... Operation.i"
+	@echo "... Operation.s"
+	@echo "... SkewHeap.o"
+	@echo "... SkewHeap.i"
+	@echo "... SkewHeap.s"
+	@echo "... SkewHeapNode.o"
+	@echo "... SkewHeapNode.i"
+	@echo "... SkewHeapNode.s"
+	@echo "... StlHeap.o"
+	@echo "... StlHeap.i"
+	@echo "... StlHeap.s"
+	@echo "... Test/test.o"
+	@echo "... Test/test.i"
+	@echo "... Test/test.s"
 .PHONY : help
 
 

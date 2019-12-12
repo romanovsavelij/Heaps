@@ -5,7 +5,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/romanovsavelij/CLionProjects/Heaps/BinomialHeap.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/BinomialHeap.cpp.o"
-  "/Users/romanovsavelij/CLionProjects/Heaps/main.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/main.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/BinomialHeapNode.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/BinomialHeapNode.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/LeftistHeap.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/LeftistHeap.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/LeftistHeapNode.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/Operation.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/Operation.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/SkewHeap.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/SkewHeap.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/SkewHeapNode.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/StlHeap.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/StlHeap.cpp.o"
+  "/Users/romanovsavelij/CLionProjects/Heaps/Test/test.cpp" "/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles/Heaps.dir/Test/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -3,4 +3,6 @@ project(Heaps)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Heaps main.cpp IHeap.h BinomialHeap.cpp BinomialHeap.h)
+add_subdirectory(Test)
+
+add_executable(Heaps IHeap.h BinomialHeap.cpp BinomialHeap.h BinomialHeapNode.cpp BinomialHeapNode.h StlHeap.cpp StlHeap.h LeftistHeap.cpp LeftistHeap.h LeftistHeapNode.cpp LeftistHeapNode.h SkewHeap.cpp SkewHeap.h SkewHeapNode.cpp SkewHeapNode.h Test/test.cpp Operation.cpp Operation.h)
