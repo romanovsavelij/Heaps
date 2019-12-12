@@ -8,9 +8,9 @@
 
 class LeftistHeap : IHeap {
 private:
-    LeftistHeapNode* head = nullptr;
-    LeftistHeapNode* mergeRoots(LeftistHeapNode* lNode, LeftistHeapNode* rNode);
-    int getNodeDist(LeftistHeapNode* node);
+    LeftistHeapNode* _head = nullptr;
+    LeftistHeapNode* _mergeRoots(LeftistHeapNode* lNode, LeftistHeapNode* rNode);
+    int _getNodeDist(LeftistHeapNode* node);
 public:
     LeftistHeap() = default;
     explicit LeftistHeap(int key);
@@ -18,7 +18,7 @@ public:
     void merge(LeftistHeap* h);
     void Insert(int key) override;
     int GetMin() const override;
-    int ExtractMin() override;
+    void ExtractMin() override;
 };
 
 

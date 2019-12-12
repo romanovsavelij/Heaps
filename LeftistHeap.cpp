@@ -2,7 +2,7 @@
 #include "LeftistHeap.h"
 
 
-LeftistHeapNode* LeftistHeap::mergeRoots(LeftistHeapNode *lNode, LeftistHeapNode* rNode) {
+LeftistHeapNode* LeftistHeap::_mergeRoots(LeftistHeapNode *lNode, LeftistHeapNode* rNode) {
     if (lNode == nullptr) {
         return rNode;
     }
@@ -18,44 +18,42 @@ LeftistHeapNode* LeftistHeap::mergeRoots(LeftistHeapNode *lNode, LeftistHeapNode
         newRoot = rNode;
         son = lNode;
     }
-    newRoot->right = mergeRoots(newRoot->right, son);
-    if (getNodeDist(newRoot->right) > getNodeDist(newRoot->left)) {
+    newRoot->right = _mergeRoots(newRoot->right, son);
+    if (_getNodeDist(newRoot->right) > _getNodeDist(newRoot->left)) {
         std::swap(newRoot->left, newRoot->right);
     }
-    newRoot->dist = getNodeDist(newRoot->right) + 1;
+    newRoot->dist = _getNodeDist(newRoot->right) + 1;
     return newRoot;
 }
 
 void LeftistHeap::Insert(int key) {
     LeftistHeapNode* tmp = new LeftistHeapNode(key);
-    head = mergeRoots(head, tmp);
+    _head = _mergeRoots(_head, tmp);
 }
 
 int LeftistHeap::GetMin() const {
-    if (head == nullptr) {
+    if (_head == nullptr) {
         return 0;
     }
-    return head->key;
+    return _head->key;
 }
 
-int LeftistHeap::ExtractMin() {
-    if (head == nullptr) {
-        return 0;
+void LeftistHeap::ExtractMin() {
+    if (_head == nullptr) {
+        return;
     }
-    int res = head->key;
-    // delete
-    head = mergeRoots(head->left, head->right);
-    return res;
+    delete _head;
+    _head = _mergeRoots(_head->left, _head->right);
 }
 
 void LeftistHeap::merge(LeftistHeap *h) {
     if (this == h) {
         return;
     }
-    head = mergeRoots(head, h->head);
+    _head = _mergeRoots(_head, h->_head);
 }
 
-int LeftistHeap::getNodeDist(LeftistHeapNode *node) {
+int LeftistHeap::_getNodeDist(LeftistHeapNode *node) {
     if (node == nullptr) {
         return 0;
     } else {

@@ -8,8 +8,8 @@
 
 class SkewHeap : IHeap {
 private:
-    SkewHeapNode* head = nullptr;
-    SkewHeapNode* mergeRoots(SkewHeapNode* lNode, SkewHeapNode* rNode);
+    SkewHeapNode* _head = nullptr;
+    SkewHeapNode* _mergeRoots(SkewHeapNode* lNode, SkewHeapNode* rNode);
 public:
     SkewHeap() = default;
     SkewHeap(int key);
@@ -17,7 +17,7 @@ public:
     void merge(SkewHeap* h);
     void Insert(int key) override;
     int GetMin() const override;
-    int ExtractMin() override;
+    void ExtractMin() override;
 };
 
 

@@ -8,8 +8,20 @@
 #include "HeapTest.h"
 
 
-TEST_F(HeapTest, stressTest) {
+TEST_F(HeapTest, BinomialHeapStressTest) {
+    runTests<BinomialHeap>();
+}
 
+TEST_F(HeapTest, LeftistHeapStressTestt) {
+    runTests<LeftistHeap>();
+}
+
+TEST_F(HeapTest, SkewHeapStressTest) {
+    runTests<SkewHeap>();
+}
+
+TEST_F(HeapTest, StlHeapStressTest) {
+    runTests<StlHeap>();
 }
 
 TEST(testBinomialHeap, testOnExamples) {

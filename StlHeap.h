@@ -8,7 +8,7 @@
 
 class StlHeap : public IHeap {
 private:
-    std::vector<int> data;
+    std::vector<int> _data;
 public:
     StlHeap() = default;
     StlHeap(int key);
@@ -16,7 +16,7 @@ public:
     void merge(StlHeap* ms);
     void Insert(int key) override;
     int GetMin() const override;
-    int ExtractMin() override;
+    void ExtractMin() override;
 };
 
 

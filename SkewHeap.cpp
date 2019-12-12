@@ -2,7 +2,7 @@
 #include "SkewHeap.h"
 
 
-SkewHeapNode* SkewHeap::mergeRoots(SkewHeapNode *lNode, SkewHeapNode* rNode) {
+SkewHeapNode* SkewHeap::_mergeRoots(SkewHeapNode *lNode, SkewHeapNode* rNode) {
     if (lNode == nullptr) {
         return rNode;
     }
@@ -18,38 +18,36 @@ SkewHeapNode* SkewHeap::mergeRoots(SkewHeapNode *lNode, SkewHeapNode* rNode) {
         newRoot = rNode;
         son = lNode;
     }
-    newRoot->right = mergeRoots(newRoot->right, son);
+    newRoot->right = _mergeRoots(newRoot->right, son);
     std::swap(newRoot->left, newRoot->right);
     return newRoot;
 }
 
 void SkewHeap::Insert(int key) {
     SkewHeapNode* tmp = new SkewHeapNode(key);
-    head = mergeRoots(head, tmp);
+    _head = _mergeRoots(_head, tmp);
 }
 
 int SkewHeap::GetMin() const {
-    if (head == nullptr) {
+    if (_head == nullptr) {
         return 0;
     }
-    return head->key;
+    return _head->key;
 }
 
-int SkewHeap::ExtractMin() {
-    if (head == nullptr) {
-        return 0;
+void SkewHeap::ExtractMin() {
+    if (_head == nullptr) {
+        return;
     }
-    int res = head->key;
-    // delete
-    head = mergeRoots(head->left, head->right);
-    return res;
+    delete _head;
+    _head = _mergeRoots(_head->left, _head->right);
 }
 
 void SkewHeap::merge(SkewHeap *h) {
     if (this == h) {
         return;
     }
-    head = mergeRoots(head, h->head);
+    _head = _mergeRoots(_head, h->_head);
 }
 
 SkewHeap::SkewHeap(int key) {
