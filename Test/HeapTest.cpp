@@ -4,7 +4,7 @@
 #include "../StlHeap.h"
 
 void HeapTest::SetUp() {
-    const int MAX_KEY_VAL = 100;
+    const int MAX_KEY_VAL = 1000000;
     srand(4123);
     _operations.resize(_OPERATIONS_COUNT);
     int heapsCounts = 0;

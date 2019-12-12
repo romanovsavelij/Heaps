@@ -9,14 +9,11 @@ LeftistHeapNode* LeftistHeap::_mergeRoots(LeftistHeapNode *lNode, LeftistHeapNod
     if (rNode == nullptr) {
         return lNode;
     }
-    LeftistHeapNode* newRoot;
-    LeftistHeapNode* son;
+    LeftistHeapNode* newRoot = rNode;
+    LeftistHeapNode* son = lNode;
     if (lNode->key < rNode->key) {
         newRoot = lNode;
         son = rNode;
-    } else {
-        newRoot = rNode;
-        son = lNode;
     }
     newRoot->right = _mergeRoots(newRoot->right, son);
     if (_getNodeDist(newRoot->right) > _getNodeDist(newRoot->left)) {

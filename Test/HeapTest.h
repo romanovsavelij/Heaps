@@ -28,27 +28,23 @@ void HeapTest::runTests() {
         switch (op.type) {
 
             case Operation::INSERT: {
-                //std::cout << "insert" << std::endl;
                 correctHeaps[op.index].Insert(op.key);
                 testingHeaps[op.index].Insert(op.key);
                 break;
             }
 
             case Operation::GET_MIN: {
-                //std::cout << "get_min" << std::endl;
                 ASSERT_EQ(correctHeaps[op.index].GetMin(), testingHeaps[op.index].GetMin());
                 break;
             }
 
             case Operation::EXTRACT_MIN: {
-                //std::cout << "extract_min" << std::endl;
                 correctHeaps[op.index].ExtractMin();
                 testingHeaps[op.index].ExtractMin();
                 break;
             }
 
             case Operation::MELD: {
-                //std::cout << "meld" << std::endl;
                 correctHeaps[op.index].merge(&correctHeaps[op.index1]);
                 correctHeaps.erase(correctHeaps.begin() + op.index1);
                 testingHeaps[op.index].merge(&testingHeaps[op.index1]);
@@ -57,7 +53,6 @@ void HeapTest::runTests() {
             }
 
             case Operation::ADD_HEAP: {
-                //std::cout << "add_heap" << std::endl;
                 correctHeaps.push_back(StlHeap(op.key));
                 testingHeaps.push_back(HeapType(op.key));
                 break;
@@ -66,6 +61,5 @@ void HeapTest::runTests() {
         }
     }
 }
-
 
 #endif //HEAPS_HEAPTEST_H
