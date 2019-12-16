@@ -9,20 +9,26 @@
 
 
 TEST_F(HeapTest, BinomialHeapStressTest) {
-    runTests<BinomialHeap>();
+    clock_t t = clock();
+    ASSERT_EQ(corAns, apply<BinomialHeap>());
+    const double work_time = (clock() - t) / double(CLOCKS_PER_SEC);
+    std::cout << "BinomialHeap work time: " << work_time << std::endl;
 }
 
 TEST_F(HeapTest, LeftistHeapStressTestt) {
-    runTests<LeftistHeap>();
+    clock_t t = clock();
+    ASSERT_EQ(corAns, apply<LeftistHeap>());
+    const double work_time = (clock() - t) / double(CLOCKS_PER_SEC);
+    std::cout << "LeftistHeap work time: " << work_time << std::endl;
 }
 
 TEST_F(HeapTest, SkewHeapStressTest) {
-    runTests<SkewHeap>();
+    clock_t t = clock();
+    ASSERT_EQ(corAns, apply<SkewHeap>());
+    const double work_time = (clock() - t) / double(CLOCKS_PER_SEC);
+    std::cout << "SkewHeap work time: " << work_time << std::endl;
 }
 
-TEST_F(HeapTest, StlHeapStressTest) {
-    runTests<StlHeap>();
-}
 
 TEST(testBinomialHeap, testOnExamples) {
     BinomialHeap h = BinomialHeap();

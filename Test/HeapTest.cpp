@@ -34,4 +34,5 @@ void HeapTest::SetUp() {
             }
         }
     }
+    corAns = apply<StlHeap>();
 }
