@@ -17,6 +17,8 @@ public:
     std::vector <int> corAns;
     template <typename HeapType>
     std::vector <int> apply();
+    template <typename HeapType>
+    void testHeap();
 };
 
 template <typename HeapType>
@@ -56,5 +58,15 @@ std::vector <int> HeapTest::apply() {
     }
     return ans;
 }
+
+template<typename HeapType>
+void HeapTest::testHeap() {
+    clock_t t = clock();
+    ASSERT_EQ(corAns, apply<HeapType>());
+    const double work_time = (clock() - t) / double(CLOCKS_PER_SEC);
+    ASSERT_LE(work_time, 0.3);
+    std::cout << "work time: " << work_time << std::endl;
+}
+
 
 #endif //HEAPS_HEAPTEST_H
