@@ -109,22 +109,9 @@ CMakeFiles/Heaps.dir/LeftistHeap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Heaps.dir/LeftistHeap.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/romanovsavelij/CLionProjects/Heaps/LeftistHeap.cpp -o CMakeFiles/Heaps.dir/LeftistHeap.cpp.s
 
-CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o: CMakeFiles/Heaps.dir/flags.make
-CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o: ../LeftistHeapNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o -c /Users/romanovsavelij/CLionProjects/Heaps/LeftistHeapNode.cpp
-
-CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/romanovsavelij/CLionProjects/Heaps/LeftistHeapNode.cpp > CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.i
-
-CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/romanovsavelij/CLionProjects/Heaps/LeftistHeapNode.cpp -o CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.s
-
 CMakeFiles/Heaps.dir/SkewHeap.cpp.o: CMakeFiles/Heaps.dir/flags.make
 CMakeFiles/Heaps.dir/SkewHeap.cpp.o: ../SkewHeap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Heaps.dir/SkewHeap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Heaps.dir/SkewHeap.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Heaps.dir/SkewHeap.cpp.o -c /Users/romanovsavelij/CLionProjects/Heaps/SkewHeap.cpp
 
 CMakeFiles/Heaps.dir/SkewHeap.cpp.i: cmake_force
@@ -135,22 +122,9 @@ CMakeFiles/Heaps.dir/SkewHeap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Heaps.dir/SkewHeap.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/romanovsavelij/CLionProjects/Heaps/SkewHeap.cpp -o CMakeFiles/Heaps.dir/SkewHeap.cpp.s
 
-CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o: CMakeFiles/Heaps.dir/flags.make
-CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o: ../SkewHeapNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o -c /Users/romanovsavelij/CLionProjects/Heaps/SkewHeapNode.cpp
-
-CMakeFiles/Heaps.dir/SkewHeapNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Heaps.dir/SkewHeapNode.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/romanovsavelij/CLionProjects/Heaps/SkewHeapNode.cpp > CMakeFiles/Heaps.dir/SkewHeapNode.cpp.i
-
-CMakeFiles/Heaps.dir/SkewHeapNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Heaps.dir/SkewHeapNode.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/romanovsavelij/CLionProjects/Heaps/SkewHeapNode.cpp -o CMakeFiles/Heaps.dir/SkewHeapNode.cpp.s
-
 CMakeFiles/Heaps.dir/Test/test.cpp.o: CMakeFiles/Heaps.dir/flags.make
 CMakeFiles/Heaps.dir/Test/test.cpp.o: ../Test/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Heaps.dir/Test/test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Heaps.dir/Test/test.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Heaps.dir/Test/test.cpp.o -c /Users/romanovsavelij/CLionProjects/Heaps/Test/test.cpp
 
 CMakeFiles/Heaps.dir/Test/test.cpp.i: cmake_force
@@ -163,7 +137,7 @@ CMakeFiles/Heaps.dir/Test/test.cpp.s: cmake_force
 
 CMakeFiles/Heaps.dir/Operation.cpp.o: CMakeFiles/Heaps.dir/flags.make
 CMakeFiles/Heaps.dir/Operation.cpp.o: ../Operation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Heaps.dir/Operation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Heaps.dir/Operation.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Heaps.dir/Operation.cpp.o -c /Users/romanovsavelij/CLionProjects/Heaps/Operation.cpp
 
 CMakeFiles/Heaps.dir/Operation.cpp.i: cmake_force
@@ -174,17 +148,43 @@ CMakeFiles/Heaps.dir/Operation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Heaps.dir/Operation.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/romanovsavelij/CLionProjects/Heaps/Operation.cpp -o CMakeFiles/Heaps.dir/Operation.cpp.s
 
+CMakeFiles/Heaps.dir/BinaryHeap.cpp.o: CMakeFiles/Heaps.dir/flags.make
+CMakeFiles/Heaps.dir/BinaryHeap.cpp.o: ../BinaryHeap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Heaps.dir/BinaryHeap.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Heaps.dir/BinaryHeap.cpp.o -c /Users/romanovsavelij/CLionProjects/Heaps/BinaryHeap.cpp
+
+CMakeFiles/Heaps.dir/BinaryHeap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Heaps.dir/BinaryHeap.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/romanovsavelij/CLionProjects/Heaps/BinaryHeap.cpp > CMakeFiles/Heaps.dir/BinaryHeap.cpp.i
+
+CMakeFiles/Heaps.dir/BinaryHeap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Heaps.dir/BinaryHeap.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/romanovsavelij/CLionProjects/Heaps/BinaryHeap.cpp -o CMakeFiles/Heaps.dir/BinaryHeap.cpp.s
+
+CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o: CMakeFiles/Heaps.dir/flags.make
+CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o: ../BinaryHeapNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o -c /Users/romanovsavelij/CLionProjects/Heaps/BinaryHeapNode.cpp
+
+CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/romanovsavelij/CLionProjects/Heaps/BinaryHeapNode.cpp > CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.i
+
+CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/romanovsavelij/CLionProjects/Heaps/BinaryHeapNode.cpp -o CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.s
+
 # Object files for target Heaps
 Heaps_OBJECTS = \
 "CMakeFiles/Heaps.dir/BinomialHeap.cpp.o" \
 "CMakeFiles/Heaps.dir/BinomialHeapNode.cpp.o" \
 "CMakeFiles/Heaps.dir/StlHeap.cpp.o" \
 "CMakeFiles/Heaps.dir/LeftistHeap.cpp.o" \
-"CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o" \
 "CMakeFiles/Heaps.dir/SkewHeap.cpp.o" \
-"CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o" \
 "CMakeFiles/Heaps.dir/Test/test.cpp.o" \
-"CMakeFiles/Heaps.dir/Operation.cpp.o"
+"CMakeFiles/Heaps.dir/Operation.cpp.o" \
+"CMakeFiles/Heaps.dir/BinaryHeap.cpp.o" \
+"CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o"
 
 # External object files for target Heaps
 Heaps_EXTERNAL_OBJECTS =
@@ -193,11 +193,11 @@ Heaps: CMakeFiles/Heaps.dir/BinomialHeap.cpp.o
 Heaps: CMakeFiles/Heaps.dir/BinomialHeapNode.cpp.o
 Heaps: CMakeFiles/Heaps.dir/StlHeap.cpp.o
 Heaps: CMakeFiles/Heaps.dir/LeftistHeap.cpp.o
-Heaps: CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o
 Heaps: CMakeFiles/Heaps.dir/SkewHeap.cpp.o
-Heaps: CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o
 Heaps: CMakeFiles/Heaps.dir/Test/test.cpp.o
 Heaps: CMakeFiles/Heaps.dir/Operation.cpp.o
+Heaps: CMakeFiles/Heaps.dir/BinaryHeap.cpp.o
+Heaps: CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o
 Heaps: CMakeFiles/Heaps.dir/build.make
 Heaps: CMakeFiles/Heaps.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/romanovsavelij/CLionProjects/Heaps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Heaps"

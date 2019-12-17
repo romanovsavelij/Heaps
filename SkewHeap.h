@@ -3,21 +3,16 @@
 #define HEAPS_SKEWHEAP_H
 
 
-#include "SkewHeapNode.h"
 #include "IHeap.h"
+#include "BinaryHeapNode.h"
+#include "BinaryHeap.h"
 
-class SkewHeap : IHeap {
-private:
-    SkewHeapNode* _head = nullptr;
-    SkewHeapNode* _mergeRoots(SkewHeapNode* lNode, SkewHeapNode* rNode);
+class SkewHeap : public BinaryHeap {
 public:
     SkewHeap() = default;
-    SkewHeap(int key);
+    explicit SkewHeap(int key);
 
-    void merge(SkewHeap* h);
-    void Insert(int key) override;
-    int GetMin() const override;
-    void ExtractMin() override;
+    void fixBalance(BinaryHeapNode* node) override;
 };
 
 

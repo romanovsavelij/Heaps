@@ -2,6 +2,4 @@
 #include "BinomialHeapNode.h"
 
 
-BinomialHeapNode::BinomialHeapNode(int key) {
-    this -> key = key;
-}
+BinomialHeapNode::BinomialHeapNode(int key) : key(key) {};

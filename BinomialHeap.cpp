@@ -53,7 +53,7 @@ void BinomialHeap::merge(BinomialHeap* h) {
     _mergeSameDegreeTrees();
 }
 
-int BinomialHeap::GetMin() const {
+int BinomialHeap::getMin() const {
     if (_head == nullptr) {
         return 0;
     }
@@ -67,7 +67,7 @@ int BinomialHeap::GetMin() const {
     return res;
 }
 
-void BinomialHeap::Insert(int key) {
+void BinomialHeap::insert(int key) {
     auto h = new BinomialHeap(new BinomialHeapNode(key));
     merge(h);
 }
@@ -117,7 +117,7 @@ BinomialHeap *BinomialHeap::_createHeapByNodeList(std::vector<BinomialHeapNode *
     return h;
 }
 
-void BinomialHeap::ExtractMin() {
+void BinomialHeap::extractMin() {
     if (_head == nullptr) {
         return;
     }
@@ -138,9 +138,7 @@ void BinomialHeap::ExtractMin() {
     merge(h);
 }
 
-BinomialHeap::BinomialHeap(BinomialHeapNode *node) {
-    _head = node;
-}
+BinomialHeap::BinomialHeap(BinomialHeapNode *node) : _head(node) {};
 
 BinomialHeap::BinomialHeap(int key) : BinomialHeap(new BinomialHeapNode(key)) {}
 

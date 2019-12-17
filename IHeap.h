@@ -6,9 +6,10 @@
 
 class IHeap {
 public:
-    virtual void Insert(int key) = 0;
-    virtual int GetMin() const = 0;
-    virtual void ExtractMin() = 0;
+    // Mergeable heap
+    virtual void insert(int key) = 0;
+    virtual int getMin() const = 0;
+    virtual void extractMin() = 0;
 };
 
 #endif //HEAPS_IHEAP_H

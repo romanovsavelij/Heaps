@@ -11,12 +11,12 @@ private:
     std::vector<int> _data;
 public:
     StlHeap() = default;
-    StlHeap(int key);
+    explicit StlHeap(int key);
 
     void merge(StlHeap* ms);
-    void Insert(int key) override;
-    int GetMin() const override;
-    void ExtractMin() override;
+    void insert(int key) override;
+    int getMin() const override;
+    void extractMin() override;
 };
 
 

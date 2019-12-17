@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Heaps.dir/BinaryHeap.cpp.o"
+  "CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o"
   "CMakeFiles/Heaps.dir/BinomialHeap.cpp.o"
   "CMakeFiles/Heaps.dir/BinomialHeapNode.cpp.o"
   "CMakeFiles/Heaps.dir/LeftistHeap.cpp.o"
-  "CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o"
   "CMakeFiles/Heaps.dir/Operation.cpp.o"
   "CMakeFiles/Heaps.dir/SkewHeap.cpp.o"
-  "CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o"
   "CMakeFiles/Heaps.dir/StlHeap.cpp.o"
   "CMakeFiles/Heaps.dir/Test/test.cpp.o"
   "Heaps"

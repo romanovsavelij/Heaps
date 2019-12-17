@@ -3,22 +3,17 @@
 #define HEAPS_LEFTISTHEAP_H
 
 
-#include "LeftistHeapNode.h"
-#include "IHeap.h"
+#include "BinaryHeapNode.h"
+#include "BinaryHeap.h"
 
-class LeftistHeap : IHeap {
+class LeftistHeap : public BinaryHeap {
 private:
-    LeftistHeapNode* _head = nullptr;
-    LeftistHeapNode* _mergeRoots(LeftistHeapNode* lNode, LeftistHeapNode* rNode);
-    int _getNodeDist(LeftistHeapNode* node);
+    int _getNodeDist(BinaryHeapNode* node);
 public:
     LeftistHeap() = default;
     explicit LeftistHeap(int key);
 
-    void merge(LeftistHeap* h);
-    void Insert(int key) override;
-    int GetMin() const override;
-    void ExtractMin() override;
+    void fixBalance(BinaryHeapNode* node) override;
 };
 
 

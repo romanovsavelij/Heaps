@@ -2,18 +2,18 @@
 #include "StlHeap.h"
 
 
-int StlHeap::GetMin() const {
+int StlHeap::getMin() const {
     if (_data.empty()) {
         return 0;
     }
     return *std::min_element(_data.begin(), _data.end());
 }
 
-void StlHeap::Insert(int key) {
+void StlHeap::insert(int key) {
     _data.push_back(key);
 }
 
-void StlHeap::ExtractMin() {
+void StlHeap::extractMin() {
     if (_data.empty()) {
         return;
     }

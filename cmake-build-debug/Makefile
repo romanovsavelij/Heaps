@@ -234,6 +234,60 @@ gtest/fast:
 	$(MAKE) -f Test/googletest/googletest/CMakeFiles/gtest.dir/build.make Test/googletest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+BinaryHeap.o: BinaryHeap.cpp.o
+
+.PHONY : BinaryHeap.o
+
+# target to build an object file
+BinaryHeap.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinaryHeap.cpp.o
+.PHONY : BinaryHeap.cpp.o
+
+BinaryHeap.i: BinaryHeap.cpp.i
+
+.PHONY : BinaryHeap.i
+
+# target to preprocess a source file
+BinaryHeap.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinaryHeap.cpp.i
+.PHONY : BinaryHeap.cpp.i
+
+BinaryHeap.s: BinaryHeap.cpp.s
+
+.PHONY : BinaryHeap.s
+
+# target to generate assembly for a file
+BinaryHeap.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinaryHeap.cpp.s
+.PHONY : BinaryHeap.cpp.s
+
+BinaryHeapNode.o: BinaryHeapNode.cpp.o
+
+.PHONY : BinaryHeapNode.o
+
+# target to build an object file
+BinaryHeapNode.cpp.o:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.o
+.PHONY : BinaryHeapNode.cpp.o
+
+BinaryHeapNode.i: BinaryHeapNode.cpp.i
+
+.PHONY : BinaryHeapNode.i
+
+# target to preprocess a source file
+BinaryHeapNode.cpp.i:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.i
+.PHONY : BinaryHeapNode.cpp.i
+
+BinaryHeapNode.s: BinaryHeapNode.cpp.s
+
+.PHONY : BinaryHeapNode.s
+
+# target to generate assembly for a file
+BinaryHeapNode.cpp.s:
+	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/BinaryHeapNode.cpp.s
+.PHONY : BinaryHeapNode.cpp.s
+
 BinomialHeap.o: BinomialHeap.cpp.o
 
 .PHONY : BinomialHeap.o
@@ -315,33 +369,6 @@ LeftistHeap.cpp.s:
 	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeap.cpp.s
 .PHONY : LeftistHeap.cpp.s
 
-LeftistHeapNode.o: LeftistHeapNode.cpp.o
-
-.PHONY : LeftistHeapNode.o
-
-# target to build an object file
-LeftistHeapNode.cpp.o:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.o
-.PHONY : LeftistHeapNode.cpp.o
-
-LeftistHeapNode.i: LeftistHeapNode.cpp.i
-
-.PHONY : LeftistHeapNode.i
-
-# target to preprocess a source file
-LeftistHeapNode.cpp.i:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.i
-.PHONY : LeftistHeapNode.cpp.i
-
-LeftistHeapNode.s: LeftistHeapNode.cpp.s
-
-.PHONY : LeftistHeapNode.s
-
-# target to generate assembly for a file
-LeftistHeapNode.cpp.s:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/LeftistHeapNode.cpp.s
-.PHONY : LeftistHeapNode.cpp.s
-
 Operation.o: Operation.cpp.o
 
 .PHONY : Operation.o
@@ -395,33 +422,6 @@ SkewHeap.s: SkewHeap.cpp.s
 SkewHeap.cpp.s:
 	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeap.cpp.s
 .PHONY : SkewHeap.cpp.s
-
-SkewHeapNode.o: SkewHeapNode.cpp.o
-
-.PHONY : SkewHeapNode.o
-
-# target to build an object file
-SkewHeapNode.cpp.o:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeapNode.cpp.o
-.PHONY : SkewHeapNode.cpp.o
-
-SkewHeapNode.i: SkewHeapNode.cpp.i
-
-.PHONY : SkewHeapNode.i
-
-# target to preprocess a source file
-SkewHeapNode.cpp.i:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeapNode.cpp.i
-.PHONY : SkewHeapNode.cpp.i
-
-SkewHeapNode.s: SkewHeapNode.cpp.s
-
-.PHONY : SkewHeapNode.s
-
-# target to generate assembly for a file
-SkewHeapNode.cpp.s:
-	$(MAKE) -f CMakeFiles/Heaps.dir/build.make CMakeFiles/Heaps.dir/SkewHeapNode.cpp.s
-.PHONY : SkewHeapNode.cpp.s
 
 StlHeap.o: StlHeap.cpp.o
 
@@ -495,6 +495,12 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... BinaryHeap.o"
+	@echo "... BinaryHeap.i"
+	@echo "... BinaryHeap.s"
+	@echo "... BinaryHeapNode.o"
+	@echo "... BinaryHeapNode.i"
+	@echo "... BinaryHeapNode.s"
 	@echo "... BinomialHeap.o"
 	@echo "... BinomialHeap.i"
 	@echo "... BinomialHeap.s"
@@ -504,18 +510,12 @@ help:
 	@echo "... LeftistHeap.o"
 	@echo "... LeftistHeap.i"
 	@echo "... LeftistHeap.s"
-	@echo "... LeftistHeapNode.o"
-	@echo "... LeftistHeapNode.i"
-	@echo "... LeftistHeapNode.s"
 	@echo "... Operation.o"
 	@echo "... Operation.i"
 	@echo "... Operation.s"
 	@echo "... SkewHeap.o"
 	@echo "... SkewHeap.i"
 	@echo "... SkewHeap.s"
-	@echo "... SkewHeapNode.o"
-	@echo "... SkewHeapNode.i"
-	@echo "... SkewHeapNode.s"
 	@echo "... StlHeap.o"
 	@echo "... StlHeap.i"
 	@echo "... StlHeap.s"

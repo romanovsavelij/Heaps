@@ -1,8 +1,7 @@
 #include "Operation.h"
 
 
-Operation::Operation(int type, int par1, int par2) {
-    this -> type = type;
+Operation::Operation(int type, int par1, int par2) : type(type) {
     if (type == INSERT) {
         index = par1;
         key = par2;

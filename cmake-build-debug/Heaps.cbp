@@ -358,6 +358,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/BinaryHeap.cpp">
+			<Option target="Heaps"/>
+			<Option target="Google_Tests_run"/>
+		</Unit>
+		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/BinaryHeap.h">
+			<Option target="Heaps"/>
+			<Option target="Google_Tests_run"/>
+		</Unit>
+		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/BinaryHeapNode.cpp">
+			<Option target="Heaps"/>
+			<Option target="Google_Tests_run"/>
+		</Unit>
+		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/BinaryHeapNode.h">
+			<Option target="Heaps"/>
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/BinomialHeap.cpp">
 			<Option target="Heaps"/>
 			<Option target="Google_Tests_run"/>
@@ -382,13 +398,6 @@
 		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/LeftistHeap.h">
 			<Option target="Heaps"/>
 		</Unit>
-		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/LeftistHeapNode.cpp">
-			<Option target="Heaps"/>
-			<Option target="Google_Tests_run"/>
-		</Unit>
-		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/LeftistHeapNode.h">
-			<Option target="Heaps"/>
-		</Unit>
 		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/Operation.cpp">
 			<Option target="Heaps"/>
 			<Option target="Google_Tests_run"/>
@@ -402,13 +411,6 @@
 			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/SkewHeap.h">
-			<Option target="Heaps"/>
-		</Unit>
-		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/SkewHeapNode.cpp">
-			<Option target="Heaps"/>
-			<Option target="Google_Tests_run"/>
-		</Unit>
-		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/SkewHeapNode.h">
 			<Option target="Heaps"/>
 		</Unit>
 		<Unit filename="/Users/romanovsavelij/CLionProjects/Heaps/StlHeap.cpp">

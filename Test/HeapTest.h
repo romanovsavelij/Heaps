@@ -27,17 +27,17 @@ std::vector <int> HeapTest::apply() {
         switch (op.type) {
 
             case Operation::INSERT: {
-                heaps[op.index].Insert(op.key);
+                heaps[op.index].insert(op.key);
                 break;
             }
 
             case Operation::GET_MIN: {
-                ans.push_back(heaps[op.index].GetMin());
+                ans.push_back(heaps[op.index].getMin());
                 break;
             }
 
             case Operation::EXTRACT_MIN: {
-                heaps[op.index].ExtractMin();
+                heaps[op.index].extractMin();
                 break;
             }
 

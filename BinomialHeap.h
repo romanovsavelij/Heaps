@@ -18,13 +18,13 @@ private:
     void _mergeSameDegreeNeighbours(BinomialHeapNode* node);
 public:
     BinomialHeap() = default;
-    BinomialHeap(BinomialHeapNode *node);
-    BinomialHeap(int key);
+    explicit BinomialHeap(BinomialHeapNode *node);
+    explicit BinomialHeap(int key);
 
     void merge(BinomialHeap* h);
-    int GetMin() const override;
-    void Insert(int key) override;
-    void ExtractMin() override;
+    int getMin() const override;
+    void insert(int key) override;
+    void extractMin() override;
 };
 
 

@@ -32,20 +32,20 @@ TEST_F(HeapTest, SkewHeapStressTest) {
 
 TEST(testBinomialHeap, testOnExamples) {
     BinomialHeap h = BinomialHeap();
-    h.Insert(3);
-    h.Insert(1);
-    h.Insert(2);
+    h.insert(3);
+    h.insert(1);
+    h.insert(2);
     BinomialHeap h1 = BinomialHeap();
-    h1.Insert(0);
-    h1.Insert(1);
+    h1.insert(0);
+    h1.insert(1);
     h.merge(&h1);
-    ASSERT_EQ(h.GetMin(), 0);
-    h.ExtractMin();
-    ASSERT_EQ(h.GetMin(), 1);
-    h.ExtractMin();
-    ASSERT_EQ(h.GetMin(), 1);
-    h.ExtractMin();
-    ASSERT_EQ(h.GetMin(), 2);
+    ASSERT_EQ(h.getMin(), 0);
+    h.extractMin();
+    ASSERT_EQ(h.getMin(), 1);
+    h.extractMin();
+    ASSERT_EQ(h.getMin(), 1);
+    h.extractMin();
+    ASSERT_EQ(h.getMin(), 2);
 }
 
 int main(int argc, char* argv[]) {
